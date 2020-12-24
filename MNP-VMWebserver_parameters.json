@@ -9,7 +9,7 @@
       "value": ""
     },
     "vmName": {
-      "value": "MNP-devcc-webvm", //representing  MNP development webserver hosted in Canada Central location.
+      "value": "MNP-devcc-webvm",
       "metadata": {
         "description": "Name of the virtual machine."
       }
