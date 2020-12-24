@@ -90,7 +90,7 @@
   },
   "variables": {
     "storageAccountName": "[concat('mnpstorage', uniquestring(resourceGroup().id))]",
-    "nicName": "MNP_WebserverVMStorageNic",
+    "nicName": "MNP_WebserverVMNic",
     "addressPrefix": "10.0.0.0/16",
     "subnetName": "Subnet",
     "subnetPrefix": "10.0.0.0/24",
