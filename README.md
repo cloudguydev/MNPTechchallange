@@ -11,13 +11,13 @@ Data residency region is in canada central.
 
 Deployed Server is enabled for Monitoring  and Update managements throughthe "bootDiagnostics""enabled": true property on the template. 
 
-Please see the <b> MNP DevOps Challange Solution Consideration</b> doc for my detailed explantion on how i considered the project requirnment and my chosen cause of action to meet the project requirnment. 
+Please see the <b> MNP DevOps Challange Solution Consideration</b> file for my detailed explantion on how i considered the project requirnment and my chosen cause of action to meet the project requirnment. Also see the <b> MNP DevOps Challange Solution Screen shot</b> file
 
 Seperated the Virtual Machine resource into a linked template.
 
 Other resources included in the deployment include:
 
-- Custom script extension
+- Configure IIS with CSE
 - Virtual Network
 - Network Security Group
 - Network Interface
