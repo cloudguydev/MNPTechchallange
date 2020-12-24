@@ -13,6 +13,8 @@ Deployed Server is enabled for Monitoring  and Update managements throughthe "bo
 
 Please see the <b> MNP DevOps Challange Solution Consideration</b> doc for my detailed explantion on how i considered the project requirnment and my chosen cause of action to meet the project requirnment. 
 
+Seperated the Virtual Machine resource into a linked template.
+
 Other resources included in the deployment include:
 
 - Custom script extension
