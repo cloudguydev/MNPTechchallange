@@ -1,5 +1,5 @@
 on: [push]
-name: Azure ARM Deploy
+name: Azure ARM
 jobs:
   build-and-deploy:
     runs-on: ubuntu-latest
@@ -19,7 +19,7 @@ jobs:
       with:
         subscriptionId: ${{ secrets.AZURE_SUBSCRIPTION }}
         resourceGroupName: ${{ secrets.AZURE_RG }}
-        template: https://raw.githubusercontent.com/cloudguydev/MNPTechchallange/main/MNP_VMWebserver_template.json
+        template: ./MNP_VMWebserver_template.json
         parameters: storageAccountType=Standard_LRS
 
       # output containerName variable from template
