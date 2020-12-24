@@ -1,0 +1,60 @@
+{
+  "$schema": "https://schema.management.azure.com/schemas/2015-01-01/deploymentTemplate.json#",
+  "contentVersion": "1.0.0.0",
+  "parameters": {
+    "name": {
+      "type": "string",
+      "minLength": 2,
+      "maxLength": 60,
+      "metadata": {
+        "description": "Service name must only contain lowercase letters, digits or dashes, cannot use dash as the first two or last one characters, cannot contain consecutive dashes, and is limited between 2 and 60 characters in length."
+      }
+    },
+    "buildid": {
+      "defaultValue": "NULL",
+      "type": "String",
+      "metadata": {
+        "description": "build ID. Override at build and release."
+      }
+    },
+    "sasToken": {
+      "defaultValue": "NULL",
+      "type": "securestring",
+      "metadata": {
+        "description": "build ID. Override at build and release."
+      }
+    },
+    "environment": {
+      "defaultValue": "NULL",
+      "type": "String",
+      "metadata": {
+        "description": "Environment to be used building out variables."
+      }
+    }
+  },
+  "variables": {
+    "templateBaseUrl": "https://MNPVMWebserverTemplate.blob.core.windows.net/armtemp/",
+    "sharedMNPVMWebserverTemplateUrl": "[concat( variables('templateBaseUrl'),parameters('buildid'), '/MNP_VMWebserver_template.json' ,parameters('sasToken') )]",
+    "sharedMNPVMWebserverParametersUrl": "[concat(variables('templateBaseUrl'),parameters('buildid'), '/', parameters('environment'), '_MNP_VMWebserver_parameters.json',parameters('sasToken'))]"
+  },
+  "resources": [
+    {
+      "apiVersion": "2019-05-01",
+      "name": "virtualMachines",
+      "type": "Microsoft.Resources/deployments",
+      "properties": {
+        "mode": "incremental",
+        "templateLink": {
+          "uri": "[variables('sharedMNPVMWebserverTemplateUrl')]",
+          "contentVersion": "1.0.0.0"
+        },
+        "parametersLink": {
+          "uri": "[variables('sharedMNPVMWebserverParametersUrl')]",
+          "contentVersion": "1.0.0.0"
+        }
+      }
+    }
+  
+  ],
+  "outputs": {}
+}

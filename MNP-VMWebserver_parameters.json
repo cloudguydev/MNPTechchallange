@@ -1,0 +1,28 @@
+{
+  "$schema": "https://schema.management.azure.com/schemas/2019-04-01/deploymentParameters.json#",
+  "contentVersion": "1.0.0.0",
+  "parameters": {
+    "adminUsername": {
+      "value": "MNP DevOps"
+    },
+    "adminPassword": {
+      "value": "MNPDevOpschallange!"
+    },
+    "vmName": {
+      "value": "MNP_devcc-webvm01", //representing first  MNP development webserver hosted in Canada Central location.
+      "metadata": {
+        "description": "Name of the virtual machine."
+      }
+    },
+    "vmSize": {
+      "value": "Standard_A1_v2"
+    },
+    "location": {
+      "value": "canadacentral"
+    },
+
+    "dnsLabelPrefix": {
+      "value": "MNP_devcc_dns"
+    }
+  }
+}
