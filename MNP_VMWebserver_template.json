@@ -11,7 +11,7 @@
     },
     "adminPassword": {
       "type": "securestring",
-      "defaultValue": "MNPVMWebAdminserver",
+      "defaultValue": "[resourceGroup().location]",
       "minLength": 12,
       "metadata": {
         "description": "Password for the Virtual Machine."
