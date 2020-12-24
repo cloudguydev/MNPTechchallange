@@ -34,7 +34,7 @@
     }
   },
   "variables": {
-    "templateBaseUrl": "https://MNPVMWebserverTemplate.blob.core.windows.net/armtemp/",
+    "templateBaseUrl": "https://mnptemplatestorage.blob.core.windows.net/mnpwebservertemplate/",
     "sharedMNPVMWebserverTemplateUrl": "[concat( variables('templateBaseUrl'),parameters('buildid'), '/MNP_VMWebserver_template.json' ,parameters('sasToken') )]",
     "sharedMNPVMWebserverParametersUrl": "[concat(variables('templateBaseUrl'),parameters('buildid'), '/', parameters('environment'), '_MNP_VMWebserver_parameters.json',parameters('sasToken'))]"
   },
