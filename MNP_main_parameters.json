@@ -3,7 +3,7 @@
     "contentVersion": "1.0.0.0",
     "parameters": {
       "name": {
-        "value": "sonydpgapidev"
+        "value": "mnpdev"
       },
       "buildid" : {
           "value": "NULL"
@@ -11,7 +11,7 @@
       "sasToken" : {
         "reference": {
             "keyVault": {
-                "id": "/subscriptions/4ecf3283-cc63-476a-8135-d402e2a0e9a4/resourceGroups/management/providers/Microsoft.KeyVault/vaults/kv-vpl-redspace"
+                "id": "/subscriptions/ef83523f-8e18-400d-ad8f-3074d3980225/resourceGroups/MNPdevopschallangerg/providers/Microsoft.KeyVault/vaults/kv-mnp"
             },
           "secretName": "SASToken"
         }
