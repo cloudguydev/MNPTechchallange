@@ -18,7 +18,7 @@
     },
     "dnsLabelPrefix": {
       "type": "string",
-      "defaultValue": "MNP-devcc-webvm_dns",
+      "defaultValue":"[toLower(concat(parameters('vmName'),'-', uniqueString(resourceGroup().id, parameters('vmName'))))]",
       "metadata": {
         "description": "Unique DNS Name for the Public IP used to access the Virtual Machine."
       }
@@ -75,7 +75,7 @@
     },
     "location": {
       "type": "string",
-      "defaultValue": "[resourceGroup().location]",
+      "defaultValue": "Canada Central,
       "metadata": {
         "description": "Location for all resources."
       }
@@ -89,8 +89,8 @@
     }
   },
   "variables": {
-    "storageAccountName": "[concat('bootdiags', uniquestring(resourceGroup().id))]",
-    "nicName": "MNP_WebserverVMNic",
+    "storageAccountName": "[concat('MNPVMStorage', uniquestring(resourceGroup().id))]",
+    "nicName": "MNP_WebserverVMStorageNic",
     "addressPrefix": "10.0.0.0/16",
     "subnetName": "Subnet",
     "subnetPrefix": "10.0.0.0/24",
