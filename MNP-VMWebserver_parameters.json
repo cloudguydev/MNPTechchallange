@@ -9,7 +9,7 @@
       "value": ""
     },
     "vmName": {
-      "value": "MNP_devcc-webvm01", //representing first  MNP development webserver hosted in Canada Central location.
+      "value": "MNP-devcc-webvm", //representing  MNP development webserver hosted in Canada Central location.
       "metadata": {
         "description": "Name of the virtual machine."
       }
@@ -18,11 +18,11 @@
       "value": "Standard_A1_v2"
     },
     "location": {
-      "value": "canadacentral"
+      "value": "Canada Central"
     },
 
     "dnsLabelPrefix": {
-      "value": "MNP_devcc-webvm01_dns"
+      "value": "MNP-devcc-webvm_dns"
     }
   }
 }
