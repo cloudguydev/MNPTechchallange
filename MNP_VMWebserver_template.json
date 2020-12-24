@@ -18,14 +18,14 @@
     },
     "dnsLabelPrefix": {
       "type": "string",
-      "defaultValue": "[toLower(concat(parameters('vmName'),'-', uniqueString(resourceGroup().id, parameters('vmName'))))]",
+      "defaultValue": "MNP_devcc-webvm01_dns",
       "metadata": {
         "description": "Unique DNS Name for the Public IP used to access the Virtual Machine."
       }
     },
     "publicIpName": {
       "type": "string",
-      "defaultValue": "myMNP_WebServerPublicIP",
+      "defaultValue": "MNP_devcc-webvm01_PublicIP",
       "metadata": {
         "description": "Name for the Public IP used to access the Virtual Machine."
       }
@@ -82,7 +82,7 @@
     },
     "vmName": {
       "type": "string",
-      "defaultValue": "MNP_devcc-webvm01",
+      "defaultValue": "MNP_devcc-webvm01",//first MNP development server hosted in canada central region
       "metadata": {
         "description": "Name of the virtual machine."
       }
@@ -94,9 +94,9 @@
     "addressPrefix": "10.0.0.0/16",
     "subnetName": "Subnet",
     "subnetPrefix": "10.0.0.0/24",
-    "virtualNetworkName": "MNP_WebserverVNET",
+    "virtualNetworkName": "MNP_devcc-webvm01_VNET",
     "subnetRef": "[resourceId('Microsoft.Network/virtualNetworks/subnets', variables('virtualNetworkName'), variables('subnetName'))]",
-    "networkSecurityGroupName": "MNP_WebServer-NSG"
+    "networkSecurityGroupName": "MNP_devcc-webvm01_NSG"
   },
   "resources": [
     {
