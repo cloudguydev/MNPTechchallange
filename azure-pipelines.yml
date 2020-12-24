@@ -20,7 +20,7 @@ steps:
     location: 'Canada Central'
     templateLocation: 'Linked artifact'
     csmFile: 'MNPTechchallange/MNP_VMWebserver_template.json'
-    overrideParameters: '-projectName MNPCD -linkedTemplateUri https://raw.githubusercontent.com/cloudguydev/MNPTechchallange/db86bf8673ed0ca73ae883267c8610a18dddcbf3/MNP_main_template.json'
+    overrideParameters: '-projectName MNPCD -linkedTemplateUri https://raw.githubusercontent.com/cloudguydev/MNPTechchallange/main/MNP_VMWebserver_template.json'
     deploymentMode: 'Incremental'
     deploymentName: 'MNPVM-Cd-Deployment'
 - script:
