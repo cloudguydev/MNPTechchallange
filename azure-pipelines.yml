@@ -1,0 +1,30 @@
+# Starter pipeline
+# Start with a minimal pipeline that you can customize to build and deploy your code.
+# Add steps that build, run tests, deploy, and more:
+# https://aka.ms/yaml
+
+trigger:
+- main
+
+pool:
+  vmImage: 'ubuntu-latest'
+
+steps:
+- 
+- task: AzureResourceManagerTemplateDeployment@3
+  inputs:
+    deploymentScope: 'Resource Group'
+    azureResourceManagerConnection: 'Free Trial(ef83523f-8e18-400d-ad8f-3074d3980225)'
+    subscriptionId: 'ef83523f-8e18-400d-ad8f-3074d3980225'
+    action: 'Create Or Update Resource Group'
+    resourceGroupName: 'MNPdevopschallangerg'
+    location: 'Canada Central'
+    templateLocation: 'Linked artifact'
+    csmFile: 'MNPTechchallange/MNP_VMWebserver_template.json'
+    overrideParameters: '-projectName MNPCD -linkedTemplateUri https://raw.githubusercontent.com/cloudguydev/MNPTechchallange/main/MNP_main_template.json'
+    deploymentMode: 'Incremental'
+    deploymentName: 'MNPVM-Cd-Deployment'
+- script: |
+    echo Add other tasks to build, test, and deploy your project.
+    echo See https://aka.ms/yaml
+  displayName: 'Run a multi-line script'
