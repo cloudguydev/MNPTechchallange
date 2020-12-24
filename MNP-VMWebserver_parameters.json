@@ -3,10 +3,10 @@
   "contentVersion": "1.0.0.0",
   "parameters": {
     "adminUsername": {
-      "value": "MNP DevOps"
+      "value": "MNPVMWebserver"
     },
     "adminPassword": {
-      "value": "MNPDevOpschallange!"
+      "value": ""
     },
     "vmName": {
       "value": "MNP_devcc-webvm01", //representing first  MNP development webserver hosted in Canada Central location.
@@ -22,7 +22,7 @@
     },
 
     "dnsLabelPrefix": {
-      "value": "MNP_devcc_dns"
+      "value": "MNP_devcc-webvm01_dns"
     }
   }
 }
