@@ -82,7 +82,7 @@
     },
     "vmName": {
       "type": "string",
-      "defaultValue": "MNP_devcc-webvm01",//first MNP development server hosted in canada central region
+      "defaultValue": "MNP_devcc-webvm01",
       "metadata": {
         "description": "Name of the virtual machine."
       }
